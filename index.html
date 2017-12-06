@@ -1,0 +1,156 @@
+<html>
+
+<head>
+  <title>Raphael Carvalho Torres</title>
+  <meta name="author" content="Raphael Carvalho Torres">
+  <meta charset="ISO-8859-1"> 
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <script type="text/javascript" src="js/Chart.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<div class="container grey lighten-3">
+
+  <nav>
+    <div class="nav-wrapper blue darken-3">
+      <span>Curriculo Raphael Carvalho Torres<span>
+    </div>
+  </nav>
+  
+  <div class="row" style="padding-top: 20px">
+  
+    <div class="card col s12 m6">
+	  <div class="col s4 m4">
+	    <img class="circle responsive-img z-depth-1" src="images\raphael_torres.png">
+	  </div>
+	  <div class="col s8 m8">
+	    <h4>Raphael Torres</h4>
+		<p>Apaixonado por tecnologia, estou sempre em busca de conhecimento.</p>
+	  </div>
+	</div>
+	
+	
+	<div class="col s12 m6">
+	  
+	  <div class="center-align">
+        <h5>Habilidades</h5>
+	  </div>
+	  
+	  <canvas id="minhasHabilidades"></canvas>
+	  
+	  <script>
+	    var options = {
+		  legend: {
+            display: false
+		  },
+		  responsive: true,
+		  scale: {
+			ticks: {
+			  display: false,
+              beginAtZero: true,
+              max: 10
+			}
+		  }
+		};
+
+		var dados = {
+		  labels: ["HTML5", "CSS", "JavaScript", "Java EE", "MySQL"],
+		  datasets: [
+			{
+			  label: "Minhas habilidades",
+			  backgroundColor: "rgba(151,187,205,0.2)",
+			  borderColor: "rgba(151,187,205,1)",
+			  pointBackgroundColor: "rgba(151,187,205,1)",
+			  pointBorderColor: "#fff",
+			  pointHighlightFill: "#fff",
+			  pointHighlightStroke: "rgba(151,187,205,1)",
+			  data: [8, 7, 3, 8, 6]
+			}
+		  ]
+		};
+
+		var ctx = document.getElementById('minhasHabilidades').getContext('2d');
+		var myRadarChart = new Chart(ctx, {
+		  type: 'radar',
+		  data: dados,
+		  options: options
+		});
+	  </script
+	  
+	</div>
+  </div>
+  
+  <div class="row">
+  
+    <div class="col s12 m6">
+  
+	  <div class="center-align">
+        <h5>Experiências</h5>
+	  </div>
+	  
+      <ul class="collapsible popout" data-collapsible="accordion">
+	    <li>
+          <div class="collapsible-header"><i class="material-icons">business</i>Hardlink</div>
+          <div class="collapsible-body">
+		    <span>Analista de planejamento</span>
+		    <h6>Emprego atual desde 01/2016</h6>
+		  
+		    <p>Ferramentas para auxiliar outros setores, relatórios em geral, gráficos, projeções.</p>
+		
+		  </div>
+	    <li>
+	  
+	    <li>
+          <div class="collapsible-header"><i class="material-icons">business</i>WT Callcenter</div>
+          <div class="collapsible-body">
+		    <span>Analista de planejamento</span>
+		    <h6>De 03/2015 até 01/2016</h6>
+		  
+		    <p>Criação de mailling, relatórios em geral, gráficos, projeções.</p>
+		
+	      </div>
+	    <li>
+	  
+	    <li>
+          <div class="collapsible-header"><i class="material-icons">business</i>Investcom Com e Repr LTDA</div>
+          <div class="collapsible-body">
+		    <span>Assistente de planejamento</span>
+		    <h6>De 03/2013 até 03/2015</h6>
+		  
+		    <p>Comissionamento da equipe de Vendas, Relatórios em excel referente ao controle de Vendas, Projeção financeira, multiplicar informações e conhecimento</p>
+		
+		  </div>
+	    <li>
+	  
+	    <li>
+          <div class="collapsible-header"><i class="material-icons">store</i>Ferragem Orso</div>
+          <div class="collapsible-body">
+		    <span>Balconista</span>
+		    <h6>De 09/2007 até 12/2013</h6>
+		  
+		    <p>Atendimento ao público, reposição de mercadorias, responder e-mails de orçamento, manter organização</p>
+		
+		  </div>
+	    <li>
+	  </ul>
+	
+	</div>
+  </div>
+  
+</div>
+  
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>
