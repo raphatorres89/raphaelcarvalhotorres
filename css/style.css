@@ -1,0 +1,20 @@
+.fb-btn{
+    background-color: #fff;
+    border-radius: 50% 8px 10px 50%;
+    color: #305891;
+    font-size: 40px;
+    height: 32px;
+    line-height: 30px;width: 32px;
+    margin: 5px;
+}
+
+.twt-btn{
+    background-color: #fff;
+    border-radius: 50%;
+    color: #2ca8d2;
+    font-size: 40px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+    width: 30px;
+}

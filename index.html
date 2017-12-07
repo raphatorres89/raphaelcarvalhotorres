@@ -3,12 +3,14 @@
 <head>
   <title>Raphael Carvalho Torres</title>
   <meta name="author" content="Raphael Carvalho Torres">
-  <meta charset="ISO-8859-1"> 
+  <meta charset="UTF-8"> 
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <!--Import materialize.css-->
+  <!-- Import Font Awesome -->
+  <link href="css/font-awesome.min.css" rel="stylesheet"/>
+  <!-- Import materialize.css -->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <!-- Import css customizado -->
+  <link type="text/css" rel="stylesheet" href="css/custom.css" />
 
   <script type="text/javascript" src="js/Chart.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,133 +19,192 @@
 <body>
 
 <div class="container grey lighten-3">
+  
+  <header>
+    <nav>
+      <div class="nav-wrapper blue darken-3 center">
+        <span>CurrÃ­culo Raphael Carvalho Torres<span>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+	<div class="row" style="padding-top: 20px">
+	  
+	  <!-- card com foto e nome -->
+	  <div class="col s12 m6">
+		<div class="card hoverable">
+		  <div class="card-content">
+			<div>
+			  <div class="col s4 m4">
+				<img class="circle responsive-img" src="images\raphael_torres.png">
+			  </div>
+			</div>
+			
+			<h5>Raphael Torres</h5>
+			<i>"Apaixonado por tecnologia, estou sempre em busca de conhecimento."</i>
+			
+		  </div>
+		</div>
+	  </div>
+	
+	  <!-- grÃ¡fico de habilidades -->
+	  <div class="col s12 m6">
+		<div class="center-align">
+		  <h5>Habilidades</h5>
+		</div>
+		  
+		<canvas id="minhasHabilidades"></canvas>
+		  
+		<script>
+		  var options = {
+			legend: {
+			  display: false
+			},
+			responsive: true,
+			scale: {
+			  ticks: {
+				display: false,
+				beginAtZero: true,
+				max: 10
+			  }
+			}
+		  };
 
-  <nav>
-    <div class="nav-wrapper blue darken-3">
-      <span>Curriculo Raphael Carvalho Torres<span>
+		  var dados = {
+		    labels: ["HTML5", "CSS", "JavaScript", "Java EE", "MySQL"],
+		    datasets: [
+			  {
+			    label: "Minhas habilidades",
+			    backgroundColor: "rgba(151,187,205,0.2)",
+			    borderColor: "rgba(151,187,205,1)",
+			    pointBackgroundColor: "rgba(151,187,205,1)",
+			    pointBorderColor: "#fff",
+			    pointHighlightFill: "#fff",
+			    pointHighlightStroke: "rgba(151,187,205,1)",
+			    data: [8, 7, 3, 8, 6]
+			  }
+		    ]
+		  };
+
+		  var ctx = document.getElementById('minhasHabilidades').getContext('2d');
+		  var myRadarChart = new Chart(ctx, {
+		    type: 'radar',
+		    data: dados,
+		    options: options
+		  });
+	    </script
+	  </div>
+	  
+	</div>
+	
+    <div class="row" style="padding-top: 20px;">
+	
+	  <!-- ExperiÃªncias -->
+	  <div class="col s12 m6">
+	    <div class="center-align">
+		  <h5>ExperiÃªncias</h5>
+	    </div>
+	  
+	    <ul class="collapsible popout" data-collapsible="accordion">
+		  <li>
+		    <div class="collapsible-header"><i class="fa fa-building"></i> Hardlink</div>
+		    <div class="collapsible-body">
+			  <span>Analista de planejamento</span>
+			  <h6>Emprego atual desde 01/2016</h6>
+		  
+			  <p>Ferramentas para auxiliar outros setores, relatÃ³rios em geral, grÃ¡ficos, projeÃ§Ãµes.</p>
+		
+		    </div>
+		  </li>
+	  
+		  <li>
+		    <div class="collapsible-header"><i class="fa fa-building"></i> WT Callcenter</div>
+		    <div class="collapsible-body">
+			  <span>Analista de planejamento</span>
+			  <h6>De 03/2015 atÃ© 01/2016</h6>
+		  
+			  <p>CriaÃ§Ã£o de mailling, relatÃ³rios em geral, grÃ¡ficos, projeÃ§Ãµes.</p>
+		
+		    </div>
+		  </li>
+	  
+		  <li>
+			<div class="collapsible-header"><i class="fa fa-building"></i> Investcom Com e Repr LTDA</div>
+			<div class="collapsible-body">
+			  <span>Assistente de planejamento</span>
+			  <h6>De 03/2013 atÃ© 03/2015</h6>
+		  
+			  <p>Comissionamento da equipe de Vendas, RelatÃ³rios em excel referente ao controle de Vendas, ProjeÃ§Ã£o financeira, multiplicar informaÃ§Ãµes e conhecimento</p>
+		
+		    </div>
+		  </li>
+	  
+		  <li>
+			<div class="collapsible-header"><i class="fa fa-shopping-bag"></i> Ferragem Orso</div>
+			<div class="collapsible-body">
+			  <span>Balconista</span>
+			  <h6>De 09/2007 atÃ© 12/2013</h6>
+			  
+			  <p>Atendimento ao pÃºblico, reposiÃ§Ã£o de mercadorias, responder e-mails de orÃ§amento, manter organizaÃ§Ã£o</p>
+			
+			</div>
+		  </li>
+	    </ul>
+	  </div>
+	  
     </div>
-  </nav>
+  </main>
   
-  <div class="row" style="padding-top: 20px">
-  
-    <div class="card col s12 m6">
-	  <div class="col s4 m4">
-	    <img class="circle responsive-img z-depth-1" src="images\raphael_torres.png">
+  <!-- footer -->
+  <footer class="page-footer blue darken-3">
+    <div class="container">
+	  <div class="row">
+	    <div class="col s12">
+		  <h5 class="white-text">Dados pessoais</h5>
+		  <ul>
+		    <li><i class="fa fa-phone yellow-text"></i> (51)99334-4415</li>
+		    <li><i class="fa fa-envelope-o orange-text"></i> rapha.oo.torres@gmail.com</li>
+		    <li><i class="fa fa-map-marker red-text"></i> Rua Marau, 153 | Cachoeirinha - RS<li>
+		    <li><i class="fa fa-birthday-cake"></i> 17/12/89 | 28 anos</li>
+			<li><i class="fa fa-globe green-text"></i> InglÃªs IntermediÃ¡rio</li>
+			<li><i class="fa fa-car grey-text"></i> <i class="fa fa-motorcycle blue-text"></i></li>
+		  </ul>
+	    </div>
 	  </div>
-	  <div class="col s8 m8">
-	    <h4>Raphael Torres</h4>
-		<p>Apaixonado por tecnologia, estou sempre em busca de conhecimento.</p>
-	  </div>
-	</div>
-	
-	
-	<div class="col s12 m6">
+    </div>
+    <div class="footer-copyright">
+	  <div class="container right-align">
 	  
-	  <div class="center-align">
-        <h5>Habilidades</h5>
-	  </div>
-	  
-	  <canvas id="minhasHabilidades"></canvas>
-	  
-	  <script>
-	    var options = {
-		  legend: {
-            display: false
-		  },
-		  responsive: true,
-		  scale: {
-			ticks: {
-			  display: false,
-              beginAtZero: true,
-              max: 10
-			}
-		  }
-		};
+	    <a href="https://www.facebook.com/raphao.torres89"></i>
+		  <span class="fa-stack fa-lg">
+			<i class="fa fa-facebook fa-stack-1x white-text"></i>
+		  </span>
+		</a>
+		<a href="https://www.instagram.com/raphatorres89/"></i>
+		  <span class="fa-stack fa-lg">
+			<i class="fa fa-instagram fa-stack-1x white-text"></i>
+		  </span>
+		</a>
+		<a href="https://twitter.com/raphactorres"></i>
+		  <span class="fa-stack fa-lg">
+			<i class="fa fa-twitter fa-stack-1x white-text"></i>
+		  </span>
+		</a>
+		<a href="https://www.linkedin.com/in/raphael-torres-ab753b126/"></i>
+		  <span class="fa-stack fa-lg">
+			<i class="fa fa-linkedin fa-stack-1x white-text"></i>
+		  </span>
+		</a>
+		<a href="https://github.com/raphatorres89"></i>
+		  <span class="fa-stack fa-lg">
+			<i class="fa fa-github fa-stack-1x white-text"></i>
+		  </span>
+		</a>
 
-		var dados = {
-		  labels: ["HTML5", "CSS", "JavaScript", "Java EE", "MySQL"],
-		  datasets: [
-			{
-			  label: "Minhas habilidades",
-			  backgroundColor: "rgba(151,187,205,0.2)",
-			  borderColor: "rgba(151,187,205,1)",
-			  pointBackgroundColor: "rgba(151,187,205,1)",
-			  pointBorderColor: "#fff",
-			  pointHighlightFill: "#fff",
-			  pointHighlightStroke: "rgba(151,187,205,1)",
-			  data: [8, 7, 3, 8, 6]
-			}
-		  ]
-		};
-
-		var ctx = document.getElementById('minhasHabilidades').getContext('2d');
-		var myRadarChart = new Chart(ctx, {
-		  type: 'radar',
-		  data: dados,
-		  options: options
-		});
-	  </script
-	  
-	</div>
-  </div>
-  
-  <div class="row">
-  
-    <div class="col s12 m6">
-  
-	  <div class="center-align">
-        <h5>Experiências</h5>
 	  </div>
-	  
-      <ul class="collapsible popout" data-collapsible="accordion">
-	    <li>
-          <div class="collapsible-header"><i class="material-icons">business</i>Hardlink</div>
-          <div class="collapsible-body">
-		    <span>Analista de planejamento</span>
-		    <h6>Emprego atual desde 01/2016</h6>
-		  
-		    <p>Ferramentas para auxiliar outros setores, relatórios em geral, gráficos, projeções.</p>
-		
-		  </div>
-	    <li>
-	  
-	    <li>
-          <div class="collapsible-header"><i class="material-icons">business</i>WT Callcenter</div>
-          <div class="collapsible-body">
-		    <span>Analista de planejamento</span>
-		    <h6>De 03/2015 até 01/2016</h6>
-		  
-		    <p>Criação de mailling, relatórios em geral, gráficos, projeções.</p>
-		
-	      </div>
-	    <li>
-	  
-	    <li>
-          <div class="collapsible-header"><i class="material-icons">business</i>Investcom Com e Repr LTDA</div>
-          <div class="collapsible-body">
-		    <span>Assistente de planejamento</span>
-		    <h6>De 03/2013 até 03/2015</h6>
-		  
-		    <p>Comissionamento da equipe de Vendas, Relatórios em excel referente ao controle de Vendas, Projeção financeira, multiplicar informações e conhecimento</p>
-		
-		  </div>
-	    <li>
-	  
-	    <li>
-          <div class="collapsible-header"><i class="material-icons">store</i>Ferragem Orso</div>
-          <div class="collapsible-body">
-		    <span>Balconista</span>
-		    <h6>De 09/2007 até 12/2013</h6>
-		  
-		    <p>Atendimento ao público, reposição de mercadorias, responder e-mails de orçamento, manter organização</p>
-		
-		  </div>
-	    <li>
-	  </ul>
-	
-	</div>
-  </div>
-  
+    </div>
+  </footer>
 </div>
   
   <!--Import jQuery before materialize.js-->
