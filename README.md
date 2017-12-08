@@ -7,13 +7,13 @@ Meu nome é Raphael Torres, e este é meu currículo online.
 
 Fiz um demonstrativo utilizando:
 
-HTML
-CSS
-javaScript
-Layout - MaterializeCSS
-Gráficos - Chart.js
-jQuery
-Ícones - Font Awesome
+1. HTML
+2. CSS
+3. javaScript
+4. Layout - MaterializeCSS
+5. Gráficos - Chart.js
+6. jQuery
+6. Ícones - Font Awesome
 
 ### Objetivo
 
