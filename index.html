@@ -16,28 +16,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<body>
-
-<div class="container grey lighten-3">
+<body class="grey lighten-3">
   
-  <header>
-    <nav>
-      <div class="nav-wrapper blue darken-3 center">
-        <span>Currículo Raphael Carvalho Torres<span>
-      </div>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <div class="nav-wrapper blue darken-3 center">
+	  <span style="font-size:24px">Raphael Carvalho Torres</span>
+    </div>
+  </nav>
+</header>
   
-  <main>
+<main>
+  <div class="container">
 	<div class="row" style="padding-top: 20px">
 	  
 	  <!-- card com foto e nome -->
 	  <div class="col s12 m6">
+	  
+	    <div class="center-align">
+		  <h5>Apresentação</h5>
+	    </div>
+	  
 		<div class="card hoverable">
 		  <div class="card-content">
 			<div>
 			  <div class="col s4 m4">
-				<img class="circle responsive-img" src="images\raphael_torres.png">
+				<img class="circle" src="images\raphael_torres.png" width="100">
 			  </div>
 			</div>
 			
@@ -54,51 +58,77 @@
 		  <h5>Habilidades</h5>
 		</div>
 		  
+		<!-- feito no custom.js -->
 		<canvas id="minhasHabilidades"></canvas>
 		  
-		<script>
-		  var options = {
-			legend: {
-			  display: false
-			},
-			responsive: true,
-			scale: {
-			  ticks: {
-				display: false,
-				beginAtZero: true,
-				max: 10
-			  }
-			}
-		  };
-
-		  var dados = {
-		    labels: ["HTML5", "CSS", "JavaScript", "Java EE", "MySQL"],
-		    datasets: [
-			  {
-			    label: "Minhas habilidades",
-			    backgroundColor: "rgba(151,187,205,0.2)",
-			    borderColor: "rgba(151,187,205,1)",
-			    pointBackgroundColor: "rgba(151,187,205,1)",
-			    pointBorderColor: "#fff",
-			    pointHighlightFill: "#fff",
-			    pointHighlightStroke: "rgba(151,187,205,1)",
-			    data: [8, 7, 3, 8, 6]
-			  }
-		    ]
-		  };
-
-		  var ctx = document.getElementById('minhasHabilidades').getContext('2d');
-		  var myRadarChart = new Chart(ctx, {
-		    type: 'radar',
-		    data: dados,
-		    options: options
-		  });
-	    </script
 	  </div>
 	  
-	</div>
-	
-    <div class="row" style="padding-top: 20px;">
+	  
+	  <!-- Educação -->
+	  <div class="col s12 m6">
+	    <div class="center-align">
+		  <h5>Educação</h5>
+	    </div>
+		
+		<ul class="collapsible popout" data-collapsible="accordion">
+		  <li>
+		    <div class="collapsible-header"><i class="fa fa-building"></i> Superior</div>
+		    <div class="collapsible-body">
+			  <b>Uniasselvi</b>
+			  <i class="right grey-text">desde 06/2015</i>
+			  <p>Cursando Análise e Desenvolvimento de Sistemas, 5º semestre.</p>
+		    </div>
+		  </li>
+		  
+		  <li>
+		    <div class="collapsible-header"><i class="fa fa-building"></i> Escolaridade</div>
+		    <div class="collapsible-body">
+			  <b>Escola Estadual Luis de Camões</b>
+			  <i class="right grey-text">formado em 12/2007</i>
+			  <p>Escola onde estudei desde a primeira série.</p>
+		    </div>
+		  </li>
+		  
+		  <li>
+		    <div class="collapsible-header"><i class="fa fa-building"></i> Cursos de Java</div>
+		    <div class="collapsible-body">
+			  <b>Algaworks</b>
+			  <i class="right grey-text">cursando em 2017</i>
+			  <p>Sistemas comerciais Java EE com CDI, JPA e Primefaces (100 horas).</p>
+			  
+			  <b>SISNEMA</b>
+			  <i class="right grey-text">09/2014</i>
+			  <p>Curso Java WEB J2EE.</p>
+		    </div>
+		  </li>
+		  
+		  <li>
+		    <div class="collapsible-header"><i class="fa fa-building"></i> Cursos Complementares</div>
+		    <div class="collapsible-body">
+			  <b>Alcides Maya</b>
+			  <i class="right grey-text">06/2013</i>
+			  <p>Excel Avançado.</p>
+			  
+			  <b>DataControl</b>
+			  <i class="right grey-text">2009</i>
+			  <p>Curso Web Page.</p>
+		    </div>
+		  </li>
+		  
+		  <li>
+		    <div class="collapsible-header"><i class="fa fa-building"></i> Cursos Administrativos</div>
+		    <div class="collapsible-body">
+			  <b>DataControl</b>
+			  <i class="right grey-text">2009</i>
+			  <p>Curso de Capacitação Administrativa.</p>
+			  
+			  <b>SENAC</b>
+			  <i class="right grey-text">2005</i>
+			  <p>Curso de Assistente Administrativo.</p>
+		    </div>
+		  </li>
+		</ul>
+	  </div>
 	
 	  <!-- Experiências -->
 	  <div class="col s12 m6">
@@ -110,101 +140,102 @@
 		  <li>
 		    <div class="collapsible-header"><i class="fa fa-building"></i> Hardlink</div>
 		    <div class="collapsible-body">
-			  <span>Analista de planejamento</span>
-			  <h6>Emprego atual desde 01/2016</h6>
-		  
+			  <b>Analista de planejamento</b>
+			  <i class="right grey-text">desde 01/2016</i>
 			  <p>Ferramentas para auxiliar outros setores, relatórios em geral, gráficos, projeções.</p>
-		
 		    </div>
 		  </li>
 	  
 		  <li>
 		    <div class="collapsible-header"><i class="fa fa-building"></i> WT Callcenter</div>
 		    <div class="collapsible-body">
-			  <span>Analista de planejamento</span>
-			  <h6>De 03/2015 até 01/2016</h6>
-		  
+			  <b>Analista de planejamento</b>
+			  <i class="right grey-text">De 03/2015 até 01/2016</i>
 			  <p>Criação de mailling, relatórios em geral, gráficos, projeções.</p>
-		
 		    </div>
 		  </li>
 	  
 		  <li>
 			<div class="collapsible-header"><i class="fa fa-building"></i> Investcom Com e Repr LTDA</div>
 			<div class="collapsible-body">
-			  <span>Assistente de planejamento</span>
-			  <h6>De 03/2013 até 03/2015</h6>
-		  
+			  <b>Assistente de planejamento</b>
+			  <i class="right grey-text">De 03/2014 até 03/2015</i>
 			  <p>Comissionamento da equipe de Vendas, Relatórios em excel referente ao controle de Vendas, Projeção financeira, multiplicar informações e conhecimento</p>
-		
 		    </div>
 		  </li>
 	  
 		  <li>
 			<div class="collapsible-header"><i class="fa fa-shopping-bag"></i> Ferragem Orso</div>
 			<div class="collapsible-body">
-			  <span>Balconista</span>
-			  <h6>De 09/2007 até 12/2013</h6>
-			  
+			  <b>Balconista</b>
+			  <i class="right grey-text">De 09/2007 até 12/2013</i>
 			  <p>Atendimento ao público, reposição de mercadorias, responder e-mails de orçamento, manter organização</p>
-			
 			</div>
 		  </li>
 	    </ul>
 	  </div>
-	  
-    </div>
-  </main>
+    
+	</div>
+  </div>
+</main>
   
-  <!-- footer -->
-  <footer class="page-footer blue darken-3">
-    <div class="container">
-	  <div class="row">
-	    <div class="col s12">
-		  <h5 class="white-text">Dados pessoais</h5>
-		  <ul>
-		    <li><i class="fa fa-phone yellow-text"></i> (51)99334-4415</li>
-		    <li><i class="fa fa-envelope-o orange-text"></i> rapha.oo.torres@gmail.com</li>
-		    <li><i class="fa fa-map-marker red-text"></i> Rua Marau, 153 | Cachoeirinha - RS<li>
-		    <li><i class="fa fa-birthday-cake"></i> 17/12/89 | 28 anos</li>
-			<li><i class="fa fa-globe green-text"></i> Inglês Intermediário</li>
-			<li><i class="fa fa-car grey-text"></i> <i class="fa fa-motorcycle blue-text"></i></li>
-		  </ul>
-	    </div>
+<!-- footer -->
+<footer class="page-footer blue darken-3">
+  <div class="container">
+    <div class="row">
+	  <div class="col s12">
+	    <h5 class="white-text">Dados pessoais</h5>
+	    <ul>
+		  <li><i class="fa fa-phone"></i> (51) 99334-4415</li>
+		  <li><i class="fa fa-envelope-o"></i> rapha.oo.torres@gmail.com</li>
+		  <li><i class="fa fa-map-marker"></i> Rua Marau, 153 | Cachoeirinha - RS</li>
+		  <li><i class="fa fa-birthday-cake"></i>
+			 17/12/89 | 
+			<script type="text/javascript">
+			  document.write((new Date).getFullYear() - (new Date(1989, 17, 12).getFullYear()));
+			</script>
+			anos
+		  </li>
+		  <li><i class="fa fa-globe"></i> Inglês Intermediário</li>
+		  <li><i class="fa fa-car"></i> <i class="fa fa-motorcycle"></i></li>
+	    </ul>
 	  </div>
     </div>
-    <div class="footer-copyright">
-	  <div class="container right-align">
-	  
-	    <a href="https://www.facebook.com/raphao.torres89"></i>
-		  <span class="fa-stack fa-lg">
-			<i class="fa fa-facebook fa-stack-1x white-text"></i>
-		  </span>
-		</a>
-		<a href="https://www.instagram.com/raphatorres89/"></i>
-		  <span class="fa-stack fa-lg">
-			<i class="fa fa-instagram fa-stack-1x white-text"></i>
-		  </span>
-		</a>
-		<a href="https://twitter.com/raphactorres"></i>
-		  <span class="fa-stack fa-lg">
-			<i class="fa fa-twitter fa-stack-1x white-text"></i>
-		  </span>
-		</a>
-		<a href="https://www.linkedin.com/in/raphael-torres-ab753b126/"></i>
-		  <span class="fa-stack fa-lg">
-			<i class="fa fa-linkedin fa-stack-1x white-text"></i>
-		  </span>
-		</a>
-		<a href="https://github.com/raphatorres89"></i>
-		  <span class="fa-stack fa-lg">
-			<i class="fa fa-github fa-stack-1x white-text"></i>
-		  </span>
-		</a>
+  </div>
+  
+  <!-- links de redes sociais -->
+  <div class="footer-copyright">
+    <div class="container right-align">
+  
+	  <a href="https://www.facebook.com/raphao.torres89">
+	    <span class="fa-stack fa-lg">
+		  <i class="fa fa-facebook fa-stack-1x white-text"></i>
+	    </span>
+	  </a>
+	  <a href="https://www.instagram.com/raphatorres89/">
+	    <span class="fa-stack fa-lg">
+		  <i class="fa fa-instagram fa-stack-1x white-text"></i>
+	    </span>
+	  </a>
+	  <a href="https://twitter.com/raphactorres">
+	    <span class="fa-stack fa-lg">
+		  <i class="fa fa-twitter fa-stack-1x white-text"></i>
+	    </span>
+	  </a>
+	  <a href="https://www.linkedin.com/in/raphael-torres-ab753b126/">
+	    <span class="fa-stack fa-lg">
+		  <i class="fa fa-linkedin fa-stack-1x white-text"></i>
+	    </span>
+	  </a>
+	  <a href="https://github.com/raphatorres89">
+	    <span class="fa-stack fa-lg">
+		  <i class="fa fa-github fa-stack-1x white-text"></i>
+	    </span>
+	  </a>
 
-	  </div>
     </div>
-  </footer>
+  </div>
+</footer>
 </div>
   
   <!--Import jQuery before materialize.js-->
