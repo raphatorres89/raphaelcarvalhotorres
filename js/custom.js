@@ -19,7 +19,7 @@
   };
 
   var dados = {
-	labels: ["HTML5", "CSS", "JavaScript", "Java EE", "MySQL"],
+	labels: ["HTML5", "CSS", "JavaScript", "Java EE", "Java SE", "MySQL"],
 	datasets: [
 	  {
 		label: "Minhas habilidades",
@@ -29,7 +29,7 @@
 		pointBorderColor: "#fff",
 		pointHighlightFill: "#fff",
 		pointHighlightStroke: "rgba(151,187,205,1)",
-		data: [8, 7, 3, 8, 6]
+		data: [8, 7, 3, 8, 3, 6]
 	  }
 	]
   };
