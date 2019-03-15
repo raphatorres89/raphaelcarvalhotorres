@@ -1,6 +1,6 @@
-## Olá
+## Raphael Carvalho Torres
 
-Meu nome é Raphael Torres, e este é meu currículo online.
+https://raphatorres89.github.io/raphaelcarvalhotorres/
 
 
 ### Tecnologia
@@ -17,4 +17,4 @@ Fiz um demonstrativo utilizando:
 
 ### Objetivo
 
-Mostrar de forma criativa o currículo, disponibilizando o código fonte para análise e estudo.  
+Mostrar de forma criativa o currículo, disponibilizando o código fonte para análise e estudo.
