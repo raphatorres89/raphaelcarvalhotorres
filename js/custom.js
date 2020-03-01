@@ -25,6 +25,9 @@
 		 "Bootstrap", 
 		 "Java", 
 		 "Spring", 
+		 "WebFlux",
+		 "Jenkins",
+		 "Docker",
 		 "MySQL", 
 		 "MongoDB", 
 		 "Laravel", 
@@ -38,7 +41,7 @@
 		pointBorderColor: "#fff",
 		pointHighlightFill: "#fff",
 		pointHighlightStroke: "rgba(151,187,205,1)",
-		data: [8, 7, 3, 5, 8, 6, 6, 6, 3, 5]
+		data: [8, 7, 4, 8, 8, 8, 6, 4, 4, 7, 6, 3, 6]
 	  }
 	]
   };
